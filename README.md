@@ -1,6 +1,6 @@
 # Template para Tesis - Plan de Tesis UNSAAC
 
-Este repositorio contiene templates en latex para plan de tesis y tesis bajo el formato de la Universidad Nacional de San Antonio Abad del Cusco - Escuela Profesional de Ingeniería Informática y de Sistemas
+Este repositorio contiene templates en latex para plan de tesis y tesis (slides + doc) bajo el formato de la Universidad Nacional de San Antonio Abad del Cusco - Escuela Profesional de Ingeniería Informática y de Sistemas
 
 ## Intrucciones
 
@@ -20,6 +20,15 @@ make
 
 ```
 Esto creará un archivo ```tesis.pdf``` en la carpeta tesis
+
+Para crear los slides de la tesis:
+
+```bash
+cd tesis-slides
+make
+
+```
+Esto creará un archivo ```slides-tesis.pdf``` en la carpeta tesis-slides
 
 Para plan de tesis:
 

@@ -1,0 +1,26 @@
+\frametitle{HOG Pyramid}
+   \begin{algorithm}[H]
+   \tiny
+       \begin{algorithmic}[1]
+       \Function{BFS }{$Image$}
+            \State $Limpiar~Lista_{Visitados}$
+            \For {$píxel~(i, j) \in Image$}
+                \If {$isValid(i, j)$}
+                  \State $Limpiar~Cola~Q$
+                  \State $q.push((i, j))$
+                  \While{$not~q.empty()$}
+                     \State $current = q.front()$
+                     \State $q.pop()$
+                     \State $Lista_{Visitados}.push(current)$
+                     \For {$píxel~(k, l)~adyacente~a~(i, j)$}
+                        \If {$isValid(k, l)$}
+                        \State $q.push((k, l))$
+                        \State $Lista_{Visitados}.push((k, l))$
+                        \EndIf
+                     \EndFor
+                  \EndWhile
+                \EndIf
+         \EndFor
+       \EndFunction
+      \end{algorithmic}
+   \end{algorithm}

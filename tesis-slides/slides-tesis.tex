@@ -1,0 +1,137 @@
+\documentclass{beamer}
+ 
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{verbatim}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{fancyhdr} %paquete de numeración de páginas
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{chngcntr}
+\usepackage{ragged2e,booktabs}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ragged2e}
+\usepackage{xmpmulti}
+\usepackage{mathtools}
+
+\lstset
+{ %Formatting for code in appendix
+    language=Python,
+    basicstyle={\tiny\ttfamily},
+    numbers=left,
+    stepnumber=1,
+    showstringspaces=false,
+    tabsize=1,
+    breaklines=true,
+    breakatwhitespace=false,
+}
+
+
+
+\usetheme{Warsaw}
+\setbeamersize{text margin left=0.5cm,text margin right=0.5cm}
+\newcommand\FontDetalleTecnico{\fontsize{8}{9.2}\selectfont}
+\tikzset{
+  font={\fontsize{7pt}{8}\selectfont}
+  }
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+\setbeamertemplate{caption}[numbered]
+
+\addto{\captionsenglish}{%redefnir nombres por defecto para el español
+  \renewcommand{\bibname}{Bibliografía}
+  \renewcommand{\abstractname}{}
+  \renewcommand{\chaptername}{Capítulo}
+  \renewcommand{\partname}{Parte}
+  \renewcommand{\contentsname}{Índice}
+  \renewcommand{\figurename}{Figura}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\listfigurename}{Índice de Figuras}
+  \renewcommand{\listtablename}{Índice de Tablas}
+}
+\newcommand\abs[1]{\left|#1\right|}
+
+
+
+%justificar el itemize
+\let\olditem=\item% 
+\renewcommand{\item}{\olditem \justifying}%
+
+% ======================================== 
+%Information to be included in the title page:
+\title{TITULO DE TESIS}
+\institute{FIEEIM - UNSAAC}
+
+\author{NOMBRE DE TESISTA}
+
+\date{14 de Febrero de 2017}%FECHA DE SUSTENTACION
+
+% ========================================= 
+
+
+
+
+%add table of content before each section
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Índice}
+    \footnotesize{
+    \tableofcontents[currentsection]
+    }
+  \end{frame}
+}
+
+
+
+ 
+\begin{document}
+
+%\frame{\titlepage}
+\input cover
+
+\begin{frame}
+   \frametitle{Esquema}
+   \begin{enumerate}
+      \item Aspectos Generales.
+      \item Desarrollo del Proyecto.
+      \item Resultados.
+      \item Conclusiones y Recomendaciones.
+   \end{enumerate}
+\end{frame}
+
+
+%\input motivacion
+
+\input introduction
+\input metodologia
+\input experimentos
+\input conclusiones
+
+
+%\frame{\titlepage}
+\input cover
+ 
+\end{document}
